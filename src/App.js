@@ -1,13 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import { Container } from './components/container.component';
 
-function App() {
-  return (
-    <div className="App">
-      dclsdlllllllllllllllllll
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      strings: ["c", "%", "DEL", "x", "1", "2", "3", "-", "4", "5", "6", "/", "7", "8", "9", "+", "0", ".", "="]
+    }
+  }
+
+  render() {
+    return (
+      <div className="App" >
+        <Container btnText={this.state.strings} />
+      </div>
+    );
+  }
+
 }
 
 export default App;
